@@ -17,6 +17,7 @@ This WordPress plugin allows you to add a custom filter for WooCommerce products
     directory or install the plugin through the WordPress plugin
     installer.
  2. Activate the plugin through the 'Plugins' menu in WordPress.
+ 3. Install the official Font Awesome plugin for the checkmark icon to work or remove from PHP file.
 
 ## Usage
 
