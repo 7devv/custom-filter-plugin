@@ -90,6 +90,21 @@ i.fa-solid.fa-circle-check {
 #length,
 #width {
   width: 50%;
+  margin-left: 10px;
+  /* Initialize progress bar (before click) */
+}
+
+/* Style numbers better */
+#length-value,
+#width-value {
+  margin-left: 10px;
+  background: #002a321f;
+  box-shadow: 2px 3px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+  padding: 5px;
 }
 
 h3 {
@@ -97,6 +112,12 @@ h3 {
 }
 
 /* slider styles */
+
+/* Needed for cross-browser visual sync */
+.form-group {
+  display: flex;
+  align-items: baseline;
+}
 
 /* Unset Browser Defaults */
 input[type="range"] {
@@ -159,21 +180,25 @@ input[type="range"]::-moz-range-track {
 /* slider thumb */
 input[type="range"]::-moz-range-thumb {
   border: none;
-  /*Removes extra border that FF applies*/
+  /*Removes extra border & border-radius that FF applies*/
   border-radius: 0;
-  /*Removes default border-radius that FF applies*/
-
   /*custom styles*/
   background-color: #002a32;
   height: 1.8rem;
   width: 1rem;
   border-radius: 6px;
+  /* animation */
+  transition: all .15s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: black;
+  transform: scale(1.1);
 }
 
 input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem;
+  border: none;
+  outline: none;
 }
 
 /* Progress bar style */

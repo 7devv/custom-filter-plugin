@@ -8,6 +8,10 @@ jQuery(document).ready(function ($) {
     var $toggleFilterButton = $('#toggle-filter');
     var $customFilterFormWrapper = $('#custom-filter-form-wrapper');
 
+    // Initialize progress bar color on page load
+    updateProgressBar($lengthSlider[0]);
+    updateProgressBar($widthSlider[0]);
+
     // Toggle filter form visibility
     $toggleFilterButton.on('click', function () {
         $customFilterFormWrapper.toggle();

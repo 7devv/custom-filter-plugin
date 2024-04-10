@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Custom Product Filter
  * Description: Adds a custom filter for WooCommerce products based on dimensions.
- * Version: 2.61
+ * Version: 2.62
  * Author: Devon Potter
- * Release Notes: Added stock 'checkmark' from fontawesome and styling/ removed stock checker php
- * Release Date: 4/09/2024
+ * Release Notes: New & better styling mostly
+ * Release Date: 4/10/2024
  */
 
 add_action('wp_ajax_filter_products', 'custom_filter_products');
