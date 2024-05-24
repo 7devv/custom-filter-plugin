@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Product Filter
  * Description: Adds a custom filter for WooCommerce products based on dimensions.
- * Version: 2.71
+ * Version: 2.72
  * Author: Devon Potter
  * Release Notes: Update CSS to have hover effect and enable fullsize images (lightbox)
  * Release Date: 4/24/2024

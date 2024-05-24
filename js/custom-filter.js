@@ -80,4 +80,33 @@ jQuery(document).ready(function ($) {
             console.log(error);
         }
     });
+
+    // Handle product image click
+    $(document).on('click', '.product-image a', function (e) {
+        e.preventDefault();
+        var imageUrl = $(this).attr('href');
+        openPopup(imageUrl);
+    });
+
+    // Open popup with product image
+    function openPopup(imageUrl) {
+        var popup = $('<div class="custom-popup"></div>');
+        var closeButton = $('<span class="close-button">&times;</span>');
+        var image = $('<img src="' + imageUrl + '" alt="Product Image">');
+
+        popup.append(closeButton, image);
+        $('body').append(popup);
+
+        // Close popup when close button is clicked
+        closeButton.on('click', function () {
+            popup.remove();
+        });
+
+        // Close popup when clicking outside the image
+        popup.on('click', function (e) {
+            if (e.target === this) {
+                popup.remove();
+            }
+        });
+    }
 });
