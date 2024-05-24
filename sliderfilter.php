@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Custom Product Filter
  * Description: Adds a custom filter for WooCommerce products based on dimensions.
- * Version: 2.62
+ * Version: 2.71
  * Author: Devon Potter
- * Release Notes: New & better styling mostly
- * Release Date: 4/10/2024
+ * Release Notes: Update CSS to have hover effect and enable fullsize images (lightbox)
+ * Release Date: 4/24/2024
  */
 
 add_action('wp_ajax_filter_products', 'custom_filter_products');
@@ -60,8 +60,12 @@ function custom_filter_products() {
                 ?>
                 <div class="product-item">
                     <div class="product-image" style="border-radius: 10px;">
+                        <a href="<?php echo wp_get_attachment_url($product->get_image_id()); ?>" class="woocommerce-main-image zoom"
+                        title="<?php the_title_attribute(); ?>">
                         <?php echo woocommerce_get_product_thumbnail(); ?>
+                        </a>
                     </div>
+
                     <h3 class="product-title"><?php the_title(); ?></h3>
                     <?php if (!empty($brand)) : ?>
                         <div class="product-brand"><?php echo esc_html($brand); ?></div>
@@ -101,6 +105,15 @@ function custom_filter_enqueue_styles() {
     wp_enqueue_style('custom-filter-styles', plugin_dir_url(__FILE__) . 'css/custom-filter.css', array(), '1.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'custom_filter_enqueue_styles');
+
+// Enable WooCommerce lightbox
+add_action('after_setup_theme', 'enable_woocommerce_lightbox_plugin');
+function enable_woocommerce_lightbox_plugin()
+{
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-lightbox');
+    add_theme_support('wc-product-gallery-slider');
+}
 
 // Add short code for easier WordPress integration
 function custom_product_filter_shortcode() {
