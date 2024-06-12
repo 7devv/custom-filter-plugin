@@ -19,6 +19,14 @@ This WordPress plugin allows you to add a custom filter for WooCommerce products
  2. Activate the plugin through the 'Plugins' menu in WordPress.
  3. Install the official Font Awesome plugin for the checkmark icon to work or remove from PHP file.
 
+ ## Updating/contributing
+
+ 1. To update the plugin, edit files as needed
+ 2. Update sliderfilter.php version and release notes (top section) with useful information
+ 3. Compress the custom-product-filter into zip following the version format
+ 4. Upload to plugin install page https://apexcountertopsnw.com/wp-admin/plugin-install.php?tab=upload
+ 5. If making big changes to anything, it may be best to delete the plugin and upload the new version, instead of overwriting.
+ 
 ## Usage
 
 After activating the plugin, you can use the shortcode `[custom_product_filter]` to display the filter and product grid on any page or post.
