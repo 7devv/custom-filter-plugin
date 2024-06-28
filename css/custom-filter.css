@@ -61,9 +61,10 @@ button#toggle-filter {
 .product-title {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 1.8rem;
+  font-size: 2.3rem !important;
   text-align: left; 
   margin-bottom: 0rem;
+  font-weight: 500;
 }
 
 .product-brand {

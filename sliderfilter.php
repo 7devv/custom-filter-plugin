@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Custom Product Filter
  * Description: Adds a custom filter for WooCommerce products based on dimensions.
- * Version: 2.73
+ * Version: 2.74
  * Author: Devon Potter
- * Release Notes: Mobile responsive tweaks
+ * Release Notes: Fix title size issue causing long words to change image sizes
  * Release Date: 4/24/2024
  */
 
