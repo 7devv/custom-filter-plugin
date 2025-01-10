@@ -27,6 +27,10 @@ This WordPress plugin allows you to add a custom filter for WooCommerce products
  4. Upload to plugin install page https://apexcountertopsnw.com/wp-admin/plugin-install.php?tab=upload
  5. If making big changes to anything, it may be best to delete the plugin and upload the new version, instead of overwriting.
  
+## Remnants Inventory
+
+Please see [ADDINGPRODUCT.MD](/ADDINGPRODUCT.MD) for how to update the remnant inventory
+
 ## Usage
 
 After activating the plugin, you can use the shortcode `[custom_product_filter]` to display the filter and product grid on any page or post.
