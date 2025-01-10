@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
             },
             beforeSend: function () {
                 // Show loading spinner or message
-                $filteredProductsContainer.html('<div class="loading">Loading...</div>');
+                $filteredProductsContainer.html('<div class="loader"><div class="loader-text">Loading...</div><div class="loader-bar"></div></div>');
             },
             success: function (response) {
                 // Update the filtered products container with the response
