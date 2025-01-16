@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Custom Product Filter
  * Description: Adds a custom filter for WooCommerce products based on dimensions.
- * Version: 2.74
+ * Version: 2.81
  * Author: Devon Potter
- * Release Notes: Fix title size issue causing long words to change image sizes
- * Release Date: 4/24/2024
+ * Release Notes: Change dimension order, remove depth measurement
+ * Release Date: 1/16/2025
  */
 
 add_action('wp_ajax_filter_products', 'custom_filter_products');
@@ -126,13 +126,13 @@ function custom_product_filter_shortcode() {
             <p>Enter your <strong>minimum</strong> slab requirements to see material that will work in your space</p>
             <form id="custom-filter-form">
                 <div class="form-group">
-                    <label for="length">Depth (inches):</label>
-                    <input type="range" id="length" name="length" min="1" max="99" step="1" value="1">
+                    <label for="length">Length (inches):</label>
+                    <input type="range" id="length" name="length" min="1" max="136" step="1" value="1">
                     <span id="length-value">1</span>
                 </div>
                 <div class="form-group">
-                    <label for="width">Length (inches):</label>
-                    <input type="range" id="width" name="width" min="1" max="140" step="1" value="1">
+                    <label for="width">Height (inches):</label>
+                    <input type="range" id="width" name="width" min="1" max="79" step="1" value="1">
                     <span id="width-value">1</span>
                 </div>
                 <button type="button" id="filter-button" class="wp-element-button">Filter</button>
